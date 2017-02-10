@@ -29,58 +29,6 @@ a {
   text-decoration: none;
 }
 
-input {
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.6rem;
-}
-
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration {
-  display: none;
-}
-
-/* -------------------------------- 
-
-Main Page Content
-
--------------------------------- */
-.cd-main-content .content-wrapper {
-  padding: 45px 5% 3em;
-}
-.cd-main-content .content-wrapper h1 {
-  text-align: center;
-  padding: 3em 0;
-  font-size: 2rem;
-}
-.cd-main-content::before {
-  /* never visible - used to check MQ in jQuery */
-  display: none;
-  content: 'mobile';
-}
-@media only screen and (min-width: 768px) {
-  .cd-main-content .content-wrapper {
-    margin-left: 110px;
-    padding-top: 55px;
-  }
-  .cd-main-content .content-wrapper h1 {
-    padding: 4em 0;
-    font-size: 3.2rem;
-    font-weight: 300;
-  }
-  .cd-main-content::before {
-    content: 'tablet';
-  }
-}
-@media only screen and (min-width: 1170px) {
-  .cd-main-content .content-wrapper {
-    margin-left: 200px;
-  }
-  .cd-main-content::before {
-    content: 'desktop';
-  }
-}
 
 /* -------------------------------- 
 
@@ -129,94 +77,7 @@ Header
     margin: 3px auto;
 }
 
-.cd-nav-trigger {
-  /* navigation trigger - visible on mobile devices only */
-  float: right;
-  position: relative;
-  display: block;
-  width: 34px;
-  height: 44px;
-  margin-right: 5%;
-  /* hide text */
-  overflow: hidden;
-  white-space: nowrap;
-  color: transparent;
-}
-.cd-nav-trigger span, .cd-nav-trigger span::before, .cd-nav-trigger span::after {
-  /* hamburger icon in CSS */
-  position: absolute;
-  display: inline-block;
-  height: 3px;
-  width: 24px;
-  background:white;
-}
-.cd-nav-trigger span {
-  /* line in the center */
-  position: absolute;
-  top: 50%;
-  right: 5px;
-  margin-top: -2px;
-  -webkit-transition: background 0.2s;
-  -moz-transition: background 0.2s;
-  transition: background 0.2s;
-}
-.cd-nav-trigger span::before, .cd-nav-trigger span::after {
-  /* other 2 lines */
-  content: '';
-  right: 0;
-  /* Force Hardware Acceleration in WebKit */
-  -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transform-origin: 0% 50%;
-  -moz-transform-origin: 0% 50%;
-  -ms-transform-origin: 0% 50%;
-  -o-transform-origin: 0% 50%;
-  transform-origin: 0% 50%;
-  -webkit-transition: -webkit-transform 0.2s;
-  -moz-transition: -moz-transform 0.2s;
-  transition: transform 0.2s;
-}
-.cd-nav-trigger span::before {
-  /* menu icon top line */
-  top: -6px;
-}
-.cd-nav-trigger span::after {
-  /* menu icon bottom line */
-  top: 6px;
-}
-.cd-nav-trigger.nav-is-visible span {
-  /* hide line in the center */
-/*  background: rgba(255, 255, 255, 0);
-*/
-background-color: white;}
-.cd-nav-trigger.nav-is-visible span::before, .cd-nav-trigger.nav-is-visible span::after {
-  /* keep visible other 2 lines */
-  background: white;
-}
-.cd-nav-trigger.nav-is-visible span::before {
-  -webkit-transform: translateX(4px) translateY(-3px) rotate(45deg);
-  -moz-transform: translateX(4px) translateY(-3px) rotate(45deg);
-  -ms-transform: translateX(4px) translateY(-3px) rotate(45deg);
-  -o-transform: translateX(4px) translateY(-3px) rotate(45deg);
-  transform: translateX(4px) translateY(-3px) rotate(45deg);
-}
-.cd-nav-trigger.nav-is-visible span::after {
-  -webkit-transform: translateX(4px) translateY(2px) rotate(-45deg);
-  -moz-transform: translateX(4px) translateY(2px) rotate(-45deg);
-  -ms-transform: translateX(4px) translateY(2px) rotate(-45deg);
-  -o-transform: translateX(4px) translateY(2px) rotate(-45deg);
-  transform: translateX(4px) translateY(2px) rotate(-45deg);
-}
-@media only screen and (min-width: 768px) {
-  .cd-nav-trigger {
-    display: none;
-  }
-}
+
 
 
 /* -------------------------------- 
@@ -370,18 +231,6 @@ Side-nav
   transition-delay: 140ms;
 }
 
-.dr-menu.dr-menu-open ul li:nth-child(6) {
-  -webkit-transition-delay: 175ms;
-  -moz-transition-delay: 175ms;
-  transition-delay: 175ms;
-}
-
-.dr-menu.dr-menu-open ul li:nth-child(7) {
-  -webkit-transition-delay: 205ms;
-  -moz-transition-delay: 205ms;
-  transition-delay: 205ms;
-}
-
 .dr-menu ul li a {
   display: inline-block;
   padding: 0 20px;
@@ -446,9 +295,6 @@ Side-nav
     background-color: darkcyan;
     margin: 14px auto;
 }
-
-
-
 
 
 /*-----------footer---------*/

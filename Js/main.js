@@ -1,4 +1,4 @@
-var YTMenu = (function() {
+var Menu = (function() {
 
 	function init() {
 		
