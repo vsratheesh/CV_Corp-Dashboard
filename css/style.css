@@ -30,6 +30,35 @@ a {
 }
 
 
+html,
+body {
+  margin:0;
+  padding:0;
+  height:100%;
+}
+#wrapper {
+  min-height:100%;
+  position:relative;
+}
+#header {
+  background:#ededed;
+  padding:10px;
+}
+#content {
+  padding-bottom:100px; /* Height of the footer element */
+}
+#footer {
+  position:absolute;
+  padding: 2em;
+    color: white;
+   text-align: center;
+   left:0px;
+   bottom:0px;
+   height:30px;
+   width:100%;
+  background-color: black;
+}
+
 /* -------------------------------- 
 
 Header
@@ -40,7 +69,7 @@ Header
   z-index: 2;
   top: 0;
   left: 0;
-  height: 45px;
+  height: 55px;
   width: 100%;
   background: white;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
@@ -85,6 +114,30 @@ Header
 Side-nav
 
 -------------------------------- */
+
+
+
+.col-md-3{
+padding:0px!important;
+bottom: 0;
+}
+ body, .container-fluid{
+  float: none;
+    padding:0px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x:hidden;
+    
+background-color: #E8DAEF!important;
+}
+
+ .container-fluid{
+    margin: 0%!important;
+  padding: 0px!important;
+  background-color: #E5E8E8;
+  width:100%!important;
+} 
+
 
 @font-face {
   font-family: 'icomoon';
@@ -297,22 +350,8 @@ Side-nav
 }
 
 
-/*-----------footer---------*/
 
-footer {
-      padding: 2em;
-    color: white;
-   text-align: center;
-   position:fixed;
-   left:0px;
-   bottom:0px;
-   height:30px;
-   width:100%;
-  background-color: black;
-}
 
-/* IE 6 */
-* html footer {
-   position:absolute;
-   top:expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight)+(ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+'px');
-}
+
+
+
